@@ -2,10 +2,8 @@
 
 (function testNotesExist(exports) {
   var note = new Note("My favourite language is JavaScript");
-
-    function test() { console.log("prints");};
-  assert.isTrue(note.savednote === "My favourite language is JavaScript");
-
+  assert.isTrue(note.note === "My favourite language is JavaScript");
+};
   exports.test = test
 })(this);
 
@@ -14,5 +12,4 @@
   assert.isTrue(note.returnNote() === "My favourite language is JavaScript");
 })();
 
-// testNotesExist();
-// testNotesReturn()
+

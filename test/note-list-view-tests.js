@@ -1,8 +1,12 @@
-function testListViewReturns() {
-  var noteview = new Notelistview();
-  var note = new Note("Fav food = beef")
-  var note = new Note("Fav drink = beer")
-  assert.isTrue(noteview.allNotes() = "Fav food = beef, Fav drink = beer");
-};
+(function testListViewReturns() {
 
-testListViewReturns()
+  var noteList = new Notelist();
+  noteList.addNote("Fav food = beef");
+  noteList.addNote("Fav drink = beer");
+
+  var noteListView = new Notelistview(noteList.savedNotes);
+  console.log(noteListView.allNotes());
+
+  assert.isTrue(noteListView.allNotes() === `<ul><li><div>Fav food = beef</div></li><li><div>Fav drink = beer</div></li></ul>`
+    );
+})(this);
