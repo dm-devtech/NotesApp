@@ -14,7 +14,7 @@
   assert.isTrue(notelist.savedNotes[0] === "test");
 })(this);
 
-function testReturnsAllNotes() {
+(function testReturnsAllNotes() {
   var notelist = new Notelist();
   notelist.addNote("test")
   assert.isTrue(notelist.returnNotes() === "test");
